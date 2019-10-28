@@ -36,7 +36,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
+    <script src="moment.js"></script>
+    <script src="moment-with-locales.js"></script>
 </head>
 
 <body>
@@ -385,15 +386,27 @@
                                                     data-toggle="collapse" href="#collapseOne">
                                                     <a class="card-link">
                                                         <i class="fab fa-rebel"></i>
-                                                        Reliance
+                                                        Bài 1: Số Nguyên Tô
                                                         <i id="click-angle" class="fas angle-down fa-angle-down "></i>
                                                     </a>
                                                 </div>
                                                 <div id="collapseOne" class="collapse show" data-parent="#accordion">
                                                     <div class="card-body">
-                                                        Professional ethics is the number one criteria. For customer, we
-                                                        will always be honest because only the trust and satisfaction of
-                                                        customers bring us success.
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <label for="">Nhập vào 1 chữ số: </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input id="songuyento" type="text">
+                                                                <button id="ktrasonguyento" class="btn btn-info"
+                                                                    onclick="kiemtrasonguyento()">Kiem
+                                                                    tra</button>
+                                                                <p id="result" class="text-danger">Hãy nhập vào chữ số
+                                                                    mà bạn muốn kiểm tra số nguyên tố</p>
+
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -402,17 +415,27 @@
                                                     data-toggle="collapse" href="#collapseTwo">
                                                     <a class="card-link">
                                                         <i class="fas fa-shipping-fast "></i>
-                                                        Fast and high quality commitment
+                                                        Bài 2: Số Đảo Ngược
                                                         <i id="click-angle1" class="fas fa-angle-up angle-down"></i>
                                                     </a>
                                                 </div>
                                                 <div id="collapseTwo" class="collapse" data-parent="#accordion">
                                                     <div class="card-body">
-                                                        We measure our success as a company by how well we achieve, not
-                                                        by the size of our profits. We'll do our best to bring you just
-                                                        the satisfied in the fastest way. When the service provider is
-                                                        not good just as committed, HT Active will refund to you. There
-                                                        will always be so.
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <label for="">Nhập vào 1 chữ số: </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input id="sodaonguoc" type="text">
+                                                                <button id="daonguoc" class="btn btn-info"
+                                                                    onclick="daonguoc()">Đảo Ngược</button>
+                                                                <p id="result-Daonguoc" class="text-danger">Hãy nhập vào
+                                                                    chữ số
+                                                                    mà bạn muốn đảo ngược</p>
+
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -421,16 +444,26 @@
                                                     data-toggle="collapse" href="#collapseThree">
                                                     <a class="card-link">
                                                         <i class="fas fa-piggy-bank"></i>
-                                                        Savings and Efficiency
+                                                        Bài 3: Tạo tất cả các kết hợp của chuỗi.
                                                         <i id="click-angle2" class="fas fa-angle-up angle-down"></i>
                                                     </a>
                                                 </div>
                                                 <div id="collapseThree" class="collapse" data-parent="#accordion">
                                                     <div class="card-body">
-                                                        We do services not only for the profits, but also by the
-                                                        passion. We’re developers, designers, support specialists and
-                                                        gamers. We all love programing. Our services will savings and
-                                                        efficiency.
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <label for="">Nhập vào 1 chữ số: </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input id="kethop" type="text">
+                                                                <button id="kethop" class="btn btn-info"
+                                                                    onclick="kethop()">Phân tích</button>
+                                                                <p id="result-kethop" class="text-danger">Hãy nhập vào
+                                                                    chữ bạn muốn phân tích:</p>
+
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -439,18 +472,140 @@
                                                     data-toggle="collapse" href="#collapseFour">
                                                     <a class=" card-link">
                                                         <i class="fas fa-question-circle"></i>
-                                                        24/7 Supporting
+                                                        Bài 4: Tìm số lần lặp của các phần tử ở trong mảng
                                                         <i id="click-angle3" class="fas fa-angle-up angle-down"></i>
 
                                                     </a>
                                                 </div>
                                                 <div id="collapseFour" class="collapse" data-parent="#accordion">
                                                     <div class="card-body">
-                                                        HT Active will always support, serve, and maintain our customer
-                                                        for long term. Beside that, we provide a live chat system,
-                                                        working 24/7, that will help you immediate access to help.
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <label for="">Nhập vào 1 chữ số: </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input id="kitulap" type="text">
+                                                                <button id="kitulap" class="btn btn-info"
+                                                                    onclick="timsolap()">Tìm</button>
+                                                                <p id="result-kitulap" class="text-danger">Hãy nhập vào
+                                                                    chữ bạn muốn tìm số lần lặp của các phần tử:</p>
+
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+                                            </div>
+
+                                            <div class="card ">
+                                                <div id="toggleClass5" class="card-header heading bg-primary text-white"
+                                                    data-toggle="collapse" href="#collapseFire">
+                                                    <a class=" card-link">
+                                                        <i class="fas fa-question-circle"></i>
+                                                        Bài 5: Tìm các phần tử mảng lớn hơn một số.
+                                                        <i id="click-angle4" class="fas fa-angle-up angle-down"></i>
+
+                                                    </a>
+                                                </div>
+                                                <div id="collapseFire" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <label for="">Nhập vào các phần tử của mảng: </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input id="nhapmang" type="text">
+
+                                                                <button id="nhapmang" class="btn btn-info"
+                                                                    onclick="nhapsophantucuamang()">Nhập</button>
+                                                                <p>Mảng của bạn: </p>
+                                                                <p id="mang" class="text-danger">Mảng trống</p>
+                                                                <input id="kitucansosanh" type="number"
+                                                                    placeholder="Số bạn muốn">
+
+                                                                <button id="sosanhtrongmang" class="btn btn-info"
+                                                                    onclick="sosanhtrongmang()">Thực hiện</button>
+                                                                <button id="nhapmang" class="btn btn-info"
+                                                                    onclick="xoamang()">Xóa mảng</button>
+                                                                <p id="result-sosanhtrongmang" class="text-danger">Hãy
+                                                                    nhập vào
+                                                                    chữ bạn muốn tìm số lần lặp của các phần tử:</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="card ">
+                                                <div id="toggleClass6" class="card-header heading bg-primary text-white"
+                                                    data-toggle="collapse" href="#collapseSix">
+                                                    <a class=" card-link">
+                                                        <i class="fas fa-question-circle"></i>
+                                                        Bài 6: Đếm số lần xuất hiện của chữ cái được chỉ định trong
+                                                        chuỗi.
+                                                        <i id="click-angle5" class="fas fa-angle-up angle-down"></i>
+
+                                                    </a>
+                                                </div>
+                                                <div id="collapseSix" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <label for="">Nhập vào 1 chữ số: </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input id="chuoikitu" type="text"
+                                                                    placeholder="Kí tự tìm kiếm">
+                                                                <input id="kitucantim" type="text">
+                                                                <button id="chuoikitu" class="btn btn-info"
+                                                                    onclick="chuoikitu()">Tìm</button>
+                                                                <p id="result-chuoikitu" class="text-danger">Hãy nhập
+                                                                    vào
+                                                                    chữ bạn muốn tìm số lần lặp của các phần tử:</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="card ">
+                                                <div id="toggleClass7" class="card-header heading bg-primary text-white"
+                                                    data-toggle="collapse" href="#collapseSeven">
+                                                    <a class=" card-link">
+                                                        <i class="fas fa-question-circle"></i>
+                                                        Bài 7: Tìm ký tự đầu tiên không lặp lại.
+                                                        <i id="click-angle6" class="fas fa-angle-up angle-down"></i>
+
+                                                    </a>
+                                                </div>
+                                                <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="row">
+
+                                                            <div class="col-md-8">
+                                                                <label for="">Nhập vào 1 chữ số: </label>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input id="bai7" type="text">
+                                                                <button id="bai7" class="btn btn-info"
+                                                                    onclick="bai7()">Tìm</button>
+                                                                <p id="result-bai7" class="text-danger">Hãy nhập vào
+                                                                    chữ bạn muốn tìm số lần lặp của các phần tử:</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -469,25 +624,108 @@
         <section class="sectionlienhe">
             <div class="container">
                 <div class="call-to-action">
-                    <div class="row">
-                        <div class="col-md-8">
+                    <!-- <div class="row"> -->
+                    <!-- <div class="col-md-8">
                             <h1 class="title text-center">ĐỪNG BỎ LỠ CƠ HỘI, LIÊN HỆ NGAY</h1>
                             <p class="text-center">Chúng tôi sẽ trả lời yêu cầu của bạn trong thời gian sớm nhất.</p>
-                        </div>
+                        </div> -->
 
-                        <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                             <div class="call-to-action">
                                 <a href="https://htactive.com/services" class="btn btn-white more">
                                     <button class=" btn btn-outline-danger width-button button1"><span>Read
                                             More</span></button>
                                 </a>
+
+                            </div>
+                            <button class="btn btn-info " onclick="xem()">Xem</button>
+
+                            <p id="timenow"> bât gui</p>
+
+                            <button class="btn btn-info " onclick="khoangtime()">Xem</button>
+                            <p id="timenow2"> begin</p>
+
+                        </div> -->
+                </div>
+                <!-- <ul>
+                    <li>
+                        <div class="row">
+
+                            <div class="col-md-8">
+                                <label for="">Nhập vào 1 chữ số: </label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="songuyento" type="text">
+                                <button id="ktrasonguyento" class="btn btn-info" onclick="kiemtrasonguyento()">Kiem
+                                    tra</button>
+                                <p id="result" class="text-danger">Hãy nhập vào chữ số mà bạn muốn kiểm tra số nguyên tố
+                                </p>
+
                             </div>
                         </div>
-                    </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div>
+                            <p id="result-Daonguoc">Hãy nhập vào chữ số mà bạn muốn Đảo ngược</p>
+                            <label for="">Nhập vào 1 chữ số: </label>
+                            <input id="sodaonguoc" type="text">
+                            <button id="daonguoc" class="btn btn-info" onclick="daonguoc()">Đảo Ngược</button>
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div class="">
+                            <p id="result-kethop">Hãy nhập vào chữ bạn muốn phân tích:</p>
+                            <label for="">Nhập vào thứ bạn muôn: </label>
+                            <input id="kethop" type="text">
+                            <button id="kethop" class="btn btn-info" onclick="kethop()">Phân tích</button>
 
-                </div>
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div>
+                            <p id="result-kitulap">Hãy nhập vào chữ số mà bạn muốn tìm kí tự lặp</p>
+                            <label for="">Nhập vào thứ bạn muốn </label>
+                            <input id="kitulap" type="text">
+                            <button id="kitulap" class="btn btn-info" onclick="timsolap()">Tìm</button>
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div>
+                            <p id="result-lonhon1so">Hãy nhập vào chữ số mà bạn muốn tìm kí tự lặp</p>
+                            <label for="">Nhập vào thứ bạn muốn </label>
+                            <input id="lonhon1so" type="text">
+                            <input id="socantim" type="text">
+                            <button id="lonhon1so" class="btn btn-info" onclick="lonhon1so()">Tìm</button>
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div>
+                            <p id="result-chuoikitu">Hãy nhập vào chữ số mà bạn muốn tìm kí tự lặp</p>
+                            <label for="">Nhập vào thứ bạn muốn </label>
+                            <input id="chuoikitu" type="text">
+                            <input id="kitucantim" type="text">
+                            <button id="chuoikitu" class="btn btn-info" onclick="chuoikitu()">Tìm</button>
+                        </div>
+                        <hr>
+                    </li>
+                    <li>
+                        <div>
+                            <p id="result-bai7">Hãy nhập vào chữ số mà bạn muốn tìm kí tự lặp</p>
+                            <label for="">Nhập vào thứ bạn muốn </label>
+                            <input id="bai7" type="text">
+                            <button id="bai7" class="btn btn-info" onclick="bai7()">Tìm</button>
+                        </div>
+                    </li>
+                </ul> -->
             </div>
-        </section>
+    </div>
+    </section>
+
     </div>
 
 </body>
