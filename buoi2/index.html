@@ -36,7 +36,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
+    <script src="moment.js"></script>
+    <script src="moment-with-locales.js"></script>
 </head>
 
 <body>
@@ -481,13 +482,22 @@
                                     <button class=" btn btn-outline-danger width-button button1"><span>Read
                                             More</span></button>
                                 </a>
+
                             </div>
+                            <button class="btn btn-info " onclick="xem()">Xem</button>
+
+                            <p id="timenow"> bât gui</p>
+
+                            <button class="btn btn-info " onload="khoangtime()">Xem</button>
+                            <p id="timenow2"> begin</p>
+
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
+
     </div>
 
 </body>

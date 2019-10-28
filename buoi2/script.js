@@ -104,7 +104,7 @@ $(document).ready(function () {
 
 $('.carousel').carousel({
     interval: 1000
-  })
+})
 
 // $(document).ready(function(){
 //     $("#carouselID").click(function(){
@@ -140,37 +140,83 @@ $('.carousel').carousel({
 
 // });
 
-    //   khai báo biến slideIndex đại diện cho slide hiện tại
-    //   var slideIndex;
-    //   // KHai bào hàm hiển thị slide
-    //   function showSlides() {
-    //       var i;
-    //       var slides = document.getElementsByClassName("mySlides");
-    //       var dots = document.getElementsByClassName("dot");
+//   khai báo biến slideIndex đại diện cho slide hiện tại
+//   var slideIndex;
+//   // KHai bào hàm hiển thị slide
+//   function showSlides() {
+//       var i;
+//       var slides = document.getElementsByClassName("mySlides");
+//       var dots = document.getElementsByClassName("dot");
 
-    //       for (i = 0; i < slides.length; i++) {
-    //          slides[i].style.display = "none";  
-    //       }
-    //       for (i = 0; i < dots.length; i++) {
-    //           dots[i].className = dots[i].className.replace(" active", "");
-    //       }
+//       for (i = 0; i < slides.length; i++) {
+//          slides[i].style.display = "none";  
+//       }
+//       for (i = 0; i < dots.length; i++) {
+//           dots[i].className = dots[i].className.replace(" active", "");
+//       }
 
-    //       slides[slideIndex].style.display = "block";  
-    //       dots[slideIndex].className += " active";
-    //       //chuyển đến slide tiếp theo
-    //       slideIndex++;
-    //       //nếu đang ở slide cuối cùng thì chuyển về slide đầu
-    //       if (slideIndex > slides.length - 1) {
-    //         slideIndex = 0
-    //       }    
-    //       //tự động chuyển đổi slide sau 5s
-    //       setTimeout(showSlides, 4000);
-    //   }
-    //   //mặc định hiển thị slide đầu tiên 
-    //   showSlides(slideIndex = 0);
+//       slides[slideIndex].style.display = "block";  
+//       dots[slideIndex].className += " active";
+//       //chuyển đến slide tiếp theo
+//       slideIndex++;
+//       //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+//       if (slideIndex > slides.length - 1) {
+//         slideIndex = 0
+//       }    
+//       //tự động chuyển đổi slide sau 5s
+//       setTimeout(showSlides, 4000);
+//   }
+//   //mặc định hiển thị slide đầu tiên 
+//   showSlides(slideIndex = 0);
 
 
-    //   function currentSlide(n) {
-    //     showSlides(slideIndex = n);
-    //   }
+//   function currentSlide(n) {
+//     showSlides(slideIndex = n);
+//   }
+// ngay lúc click vào
+var time1, time2;
 
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+var a,b;
+function xem() {
+var today = new Date();
+
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    a = h + ":" + m + ":" + s;
+    document.getElementById("timenow").innerHTML  = a;
+
+}
+// sau click 1 time
+
+function khoangtime() {
+    var timeover = new Date()
+    // var timeover = nowtimeclick - today
+    var h = 16;
+    var m = 19;
+    var s = 0;
+    m = checkTime(m);
+    s = checkTime(s);
+     b  = h + ":" + m + ":" + s;
+    if(a === b ){
+        alert("âs");
+    }
+    else{
+        alert("sai");
+    }
+    // document.getElementById("timenow2").innerHTML  = a;
+    moment.locale('vi');
+    var a = "20/10/2019 23:59";
+    moment(a, 'DD/MM/YYYY hh:mm')
+    .startOf('hour')
+    .fromNow()
+
+}
