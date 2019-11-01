@@ -295,6 +295,7 @@ function checkTime(i) {
     }
     return i;
 }
+<<<<<<< HEAD
 
 function xem() {
     var today = new Date();
@@ -314,10 +315,24 @@ function xem() {
     m = checkTime(m);
     a = DD + "/" + MM + "/" + YYYY + " " + h + ":" + m;
     document.getElementById("timenow").innerHTML = a;
+=======
+var a,b;
+function xem() {
+var today = new Date();
+
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    a = h + ":" + m + ":" + s;
+    document.getElementById("timenow").innerHTML  = a;
+>>>>>>> d1351d9890706a5ec7384bef3e480231ecde3c00
 
 }
 // sau click 1 time
 
+<<<<<<< HEAD
 
 function khoangtime() {
 
@@ -489,5 +504,28 @@ function bai7() {
     }
 
 
+=======
+function khoangtime() {
+    var timeover = new Date()
+    // var timeover = nowtimeclick - today
+    var h = 16;
+    var m = 19;
+    var s = 0;
+    m = checkTime(m);
+    s = checkTime(s);
+     b  = h + ":" + m + ":" + s;
+    if(a === b ){
+        alert("âs");
+    }
+    else{
+        alert("sai");
+    }
+    // document.getElementById("timenow2").innerHTML  = a;
+    moment.locale('vi');
+    var a = "20/10/2019 23:59";
+    moment(a, 'DD/MM/YYYY hh:mm')
+    .startOf('hour')
+    .fromNow()
+>>>>>>> d1351d9890706a5ec7384bef3e480231ecde3c00
 
 }
